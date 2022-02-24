@@ -14,6 +14,9 @@
 		E09CB8C027C7BF6D00A800DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8BF27C7BF6D00A800DD /* Assets.xcassets */; };
 		E09CB8C327C7BF6D00A800DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8C127C7BF6D00A800DD /* LaunchScreen.storyboard */; };
 		E09CB8CB27C7C0FB00A800DD /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09CB8CA27C7C0FB00A800DD /* AddTaskViewController.swift */; };
+		E09CB8D027C7C3A700A800DD /* WorkSans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8CD27C7C3A700A800DD /* WorkSans-Light.otf */; };
+		E09CB8D127C7C3A700A800DD /* WorkSans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8CE27C7C3A700A800DD /* WorkSans-Bold.otf */; };
+		E09CB8D227C7C3A700A800DD /* WorkSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8CF27C7C3A700A800DD /* WorkSans-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		E09CB8C227C7BF6D00A800DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E09CB8C427C7BF6D00A800DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E09CB8CA27C7C0FB00A800DD /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		E09CB8CD27C7C3A700A800DD /* WorkSans-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Light.otf"; sourceTree = "<group>"; };
+		E09CB8CE27C7C3A700A800DD /* WorkSans-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Bold.otf"; sourceTree = "<group>"; };
+		E09CB8CF27C7C3A700A800DD /* WorkSans-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "WorkSans-Regular.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		E09CB8B527C7BF6B00A800DD /* 19TODO */ = {
 			isa = PBXGroup;
 			children = (
+				E09CB8CC27C7C36900A800DD /* Fonts */,
 				E09CB8B627C7BF6B00A800DD /* AppDelegate.swift */,
 				E09CB8B827C7BF6B00A800DD /* SceneDelegate.swift */,
 				E09CB8BA27C7BF6B00A800DD /* TodoListViewController.swift */,
@@ -68,6 +75,16 @@
 				E09CB8C427C7BF6D00A800DD /* Info.plist */,
 			);
 			path = 19TODO;
+			sourceTree = "<group>";
+		};
+		E09CB8CC27C7C36900A800DD /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E09CB8CE27C7C3A700A800DD /* WorkSans-Bold.otf */,
+				E09CB8CD27C7C3A700A800DD /* WorkSans-Light.otf */,
+				E09CB8CF27C7C3A700A800DD /* WorkSans-Regular.otf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +147,10 @@
 			files = (
 				E09CB8C327C7BF6D00A800DD /* LaunchScreen.storyboard in Resources */,
 				E09CB8C027C7BF6D00A800DD /* Assets.xcassets in Resources */,
+				E09CB8D227C7C3A700A800DD /* WorkSans-Regular.otf in Resources */,
+				E09CB8D027C7C3A700A800DD /* WorkSans-Light.otf in Resources */,
 				E09CB8BE27C7BF6B00A800DD /* Main.storyboard in Resources */,
+				E09CB8D127C7C3A700A800DD /* WorkSans-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
