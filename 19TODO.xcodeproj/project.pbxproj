@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		E09CB8B727C7BF6B00A800DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09CB8B627C7BF6B00A800DD /* AppDelegate.swift */; };
 		E09CB8B927C7BF6B00A800DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09CB8B827C7BF6B00A800DD /* SceneDelegate.swift */; };
-		E09CB8BB27C7BF6B00A800DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09CB8BA27C7BF6B00A800DD /* ViewController.swift */; };
+		E09CB8BB27C7BF6B00A800DD /* TodoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09CB8BA27C7BF6B00A800DD /* TodoListViewController.swift */; };
 		E09CB8BE27C7BF6B00A800DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8BC27C7BF6B00A800DD /* Main.storyboard */; };
 		E09CB8C027C7BF6D00A800DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8BF27C7BF6D00A800DD /* Assets.xcassets */; };
 		E09CB8C327C7BF6D00A800DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E09CB8C127C7BF6D00A800DD /* LaunchScreen.storyboard */; };
+		E09CB8CB27C7C0FB00A800DD /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E09CB8CA27C7C0FB00A800DD /* AddTaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E09CB8B327C7BF6B00A800DD /* 19TODO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 19TODO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E09CB8B627C7BF6B00A800DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E09CB8B827C7BF6B00A800DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E09CB8BA27C7BF6B00A800DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E09CB8BA27C7BF6B00A800DD /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		E09CB8BD27C7BF6B00A800DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E09CB8BF27C7BF6D00A800DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E09CB8C227C7BF6D00A800DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E09CB8C427C7BF6D00A800DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E09CB8CA27C7C0FB00A800DD /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				E09CB8B627C7BF6B00A800DD /* AppDelegate.swift */,
 				E09CB8B827C7BF6B00A800DD /* SceneDelegate.swift */,
-				E09CB8BA27C7BF6B00A800DD /* ViewController.swift */,
+				E09CB8BA27C7BF6B00A800DD /* TodoListViewController.swift */,
 				E09CB8BC27C7BF6B00A800DD /* Main.storyboard */,
+				E09CB8CA27C7C0FB00A800DD /* AddTaskViewController.swift */,
 				E09CB8BF27C7BF6D00A800DD /* Assets.xcassets */,
 				E09CB8C127C7BF6D00A800DD /* LaunchScreen.storyboard */,
 				E09CB8C427C7BF6D00A800DD /* Info.plist */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E09CB8BB27C7BF6B00A800DD /* ViewController.swift in Sources */,
+				E09CB8BB27C7BF6B00A800DD /* TodoListViewController.swift in Sources */,
+				E09CB8CB27C7C0FB00A800DD /* AddTaskViewController.swift in Sources */,
 				E09CB8B727C7BF6B00A800DD /* AppDelegate.swift in Sources */,
 				E09CB8B927C7BF6B00A800DD /* SceneDelegate.swift in Sources */,
 			);
@@ -306,7 +310,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -334,7 +338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
