@@ -9,9 +9,12 @@ import UIKit
 
 class TodoListController: UIViewController {
 
+    @IBOutlet weak var addTaskButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        addTaskButton.layer.cornerRadius = 16
+        
     }
 
 
