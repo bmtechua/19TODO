@@ -7,6 +7,9 @@
 		<string>WorkSans-Bold.otf</string>
 		<string>WorkSans-Light.otf</string>
 		<string>WorkSans-Regular.otf</string>
+		<string>Roboto-Bold.ttf</string>
+		<string>Roboto-Italic.ttf</string>
+		<string>Roboto-Regular.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

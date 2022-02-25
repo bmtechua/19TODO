@@ -8,8 +8,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
         <array key="WorkSans-Bold.otf">
             <string>WorkSans-Bold</string>
+        </array>
+        <array key="WorkSans-Regular.otf">
+            <string>WorkSans-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -22,16 +28,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6mI-aM-pB3">
-                                <rect key="frame" x="8" y="58" width="374" height="86"/>
+                                <rect key="frame" x="8" y="58.000000000000007" width="374" height="85.666666666666686"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Do it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yg1-1Y-XVF">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="39.666666666666664"/>
                                         <fontDescription key="fontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ofg-TJ-V15">
-                                        <rect key="frame" x="0.0" y="48" width="374" height="38"/>
+                                        <rect key="frame" x="0.0" y="47.666666666666671" width="374" height="38"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oKq-jw-47t">
                                                 <rect key="frame" x="0.0" y="0.0" width="266" height="38"/>
@@ -112,14 +118,117 @@
                     <view key="view" contentMode="scaleToFill" id="B5G-lJ-3Cl">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wnt-3J-WzH">
+                                <rect key="frame" x="23" y="88" width="329" height="230"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="FLv-kI-ptJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="329" height="143"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="HGQ-PT-lNP">
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="62"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w90-su-9HR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="27"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="27" id="bIT-bc-6lN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lq5-XF-COS">
+                                                        <rect key="frame" x="0.0" y="27" width="329" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="eaM-Cn-dwu"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="329" id="mrq-va-Ey9"/>
+                                                </constraints>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hDO-bm-xoi">
+                                                <rect key="frame" x="0.0" y="81" width="329" height="62"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Desc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8e-mb-ZVg">
+                                                        <rect key="frame" x="0.0" y="0.0" width="329" height="27"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="27" id="3av-r8-s3Q"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="A4P-Yi-2Lu">
+                                                        <rect key="frame" x="0.0" y="27" width="329" height="35"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="35" id="cgl-Ni-W2j"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="WorkSans-Regular" family="Work Sans" pointSize="20"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="329" id="Mcr-CR-ccz"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pse-Qw-zDn">
+                                        <rect key="frame" x="0.0" y="171" width="329" height="59"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsT-Ar-kiU">
+                                                <rect key="frame" x="0.0" y="0.0" width="57" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="57" id="xtn-Qd-mBK"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBL-yx-czt">
+                                                <rect key="frame" x="57" y="0.0" width="215" height="59"/>
+                                                <color key="backgroundColor" red="0.241348654" green="0.27251392600000002" blue="0.35295230150000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="59" id="Oyc-2Y-r6C"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Add">
+                                                    <fontDescription key="titleFontDescription" name="WorkSans-Bold" family="Work Sans" pointSize="20"/>
+                                                    <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDt-SM-3Kw">
+                                                <rect key="frame" x="272" y="0.0" width="57" height="59"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="57" id="Jk2-zG-KCI"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TKO-lf-Iwe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wnt-3J-WzH" firstAttribute="leading" secondItem="TKO-lf-Iwe" secondAttribute="leading" constant="23" id="OcZ-93-8Fe"/>
+                            <constraint firstItem="Wnt-3J-WzH" firstAttribute="top" secondItem="TKO-lf-Iwe" secondAttribute="top" id="f21-Jv-ohQ"/>
+                            <constraint firstItem="TKO-lf-Iwe" firstAttribute="trailing" secondItem="Wnt-3J-WzH" secondAttribute="trailing" constant="23" id="nwU-KI-6X2"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0g8-Bk-uIJ"/>
+                    <connections>
+                        <outlet property="addButton" destination="UBL-yx-czt" id="T6W-ba-b6K"/>
+                        <outlet property="descTextView" destination="A4P-Yi-2Lu" id="6TG-y9-tuS"/>
+                        <outlet property="nameTextView" destination="lq5-XF-COS" id="Wfw-E8-fa6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9QE-Pl-wH3" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1085" y="75"/>
+            <point key="canvasLocation" x="1084.6153846153845" y="74.644549763033169"/>
         </scene>
     </scenes>
     <resources>
