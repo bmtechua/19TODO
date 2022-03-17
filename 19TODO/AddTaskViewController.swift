@@ -7,7 +7,17 @@
 
 import UIKit
 
+protocol AddTaskViewControllerDelegate: AnyObject {
+    func enteredTaskName(_ name: String, _ disc: String)
+    
+}
+
 class AddTaskViewController: UIViewController {
+    
+    var delegate: AddTaskViewControllerDelegate?
+    
+        
+    
 
     @IBOutlet weak var addButton: UIButton!
     
@@ -37,6 +47,11 @@ class AddTaskViewController: UIViewController {
         addButton.layer.cornerRadius = 16
     }
     
+    @IBAction func addTaskButton(_ sender: Any) {
+        delegate?.enteredTaskName(nameTextView.text ?? "No name", descTextView.text ?? "No descrription")
+        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+    }
     
     
 }
