@@ -7,72 +7,82 @@
 
 import UIKit
 
-class TodoListController: UIViewController{
-    @IBOutlet  var myTable: UITableView!
+class TodoListController: UIViewController {
     
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var myTable: UITableView!
     
-    //@IBOutlet weak var inputLabel: UILabel!
-    var identifier = "myCell"
-    var arr: [(String, String)] = []
-    
+    var identifier = "cell"
+    var arr: [Todo] = []
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-       
-        
+        self.arr = UserDefaults.standard.object(forKey: "item") as? [Todo] ?? []
+        addButton.layer.cornerRadius = 16
+
+        setSettingNavContr()
         createTable()
-        
-   
-    
     }
-    
-    func createTable() {
-        
+    func createTable () {
         myTable.register(UITableViewCell.self, forCellReuseIdentifier: identifier)
         self.myTable.delegate = self
         self.myTable.dataSource = self
         
-        
         view.addSubview(myTable)
     }
     
-   
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let vc = segue.destination as? AddTaskViewController else {
-            return
-        }
-        vc.delegate = self
+        let vc = segue.destination as? AddTaskViewController
+        vc?.delegate = self
     }
-   
-}
-
-extension TodoListController: AddTaskViewControllerDelegate {
-    func enteredTaskName(_ name: String, _ disc: String) {
-        //inputLabel.text = name + " - " + disc
-        let temp = (name, disc)
-        arr.append(temp)
-        print(arr)
+    
+    func setSettingNavContr() {
+        navigationItem.backButtonTitle = ""
+        navigationItem.title = "        To Do List"
     }
+    
+    @IBAction func changeButton(_ sender: UIButton) {
+        isEditing = !isEditing
+    }
+    
 }
-
 extension TodoListController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arr.count
+        arr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
         let temp = arr[indexPath.row]
-        cell.textLabel?.text = "Test" + temp.0
+        
+        var content = cell.defaultContentConfiguration()
+        content.text = temp.name
+        content.secondaryText = temp.description
+        cell.contentConfiguration = content
         
         return cell
     }
+  
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50.0
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            arr.remove(at: indexPath.row)
+            myTable.deleteRows(at: [indexPath], with: .left)
+        }
+    }
+}
+
+extension TodoListController: AddTaskViewControllerDelegate {
+    
+    func enteredArr(_ name: String, _ disc: String) {
+        DispatchQueue.main.async {
+            let newEntry = [Todo]()
+            UserDefaults.standard.setValue(newEntry, forKey: "items")
+            self.arr.append(Todo(name: name, description: disc))
+            self.myTable.reloadData()
+        }
     }
 }
