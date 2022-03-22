@@ -17,6 +17,7 @@ class TodoListController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.arr = UserDefaults.standard.object(forKey: "item") as? [Todo] ?? []
         addButton.layer.cornerRadius = 16
 
@@ -38,7 +39,7 @@ class TodoListController: UIViewController {
     
     func setSettingNavContr() {
         navigationItem.backButtonTitle = ""
-        navigationItem.title = "        To Do List"
+        navigationItem.title = "Let's Do It"
     }
     
     @IBAction func changeButton(_ sender: UIButton) {
